@@ -1,0 +1,15 @@
+{
+  "name": "t4vrn-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "tailwind:build": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "tailwind:watch": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "xp.css": "^0.2.6"
+  }
+}

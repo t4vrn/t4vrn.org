@@ -1,0 +1,18 @@
+[package]
+name = "t4vrn-site"
+version = "0.0.0"
+edition = "2024"
+license = "MIT-0 OR Apache-2.0"
+repository = "https://github.com/t4vrn/t4vrn.org"
+
+[dependencies]
+dioxus = { version = "0.7", features = ["web", "router"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[profile.release]
+opt-level = "z"         # Optimize for size
+lto = true              # Link Time Optimization
+codegen-units = 1       # Better optimization
+panic = "abort"         # Smaller binary
+strip = true            # Remove debug symbols

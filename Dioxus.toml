@@ -1,0 +1,18 @@
+[application]
+name = "t4vrn-landing"
+default_platform = "web"
+asset_dir = "public"
+
+[web.app]
+title = "T4vrn - For VR Netizens"
+base_path = "/"
+
+[web.ssg]
+enabled = true
+
+[web.watcher]
+watch_path = ["src", "public"]
+reload_html = true
+
+[web.resource.dev]
+style = ["public/output.css"]

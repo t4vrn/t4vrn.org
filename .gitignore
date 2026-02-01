@@ -1,0 +1,25 @@
+# Rust/Cargo
+/target
+**/*.rs.bk
+
+# Dioxus
+/dist
+/dx
+
+# Generated CSS
+/public/output.css*
+
+# Node
+node_modules/
+package-lock.json
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Nix
+result
+result-*
+.direnv/
+.envrc

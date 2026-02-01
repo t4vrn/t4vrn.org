@@ -1,0 +1,88 @@
+/* @import 'xp.css/dist/XP.css'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode sakura colors */
+    --sakura-50: #fef6f9;
+    --sakura-100: #fdedf3;
+    --sakura-200: #fcdbe8;
+    --sakura-300: #fac3d9;
+    --sakura-400: #f69dc3;
+    --sakura-500: #f076ad;
+    --sakura-600: #e84e8f;
+    --sakura-700: #d13371;
+    --sakura-800: #ad285c;
+    --sakura-900: #8f254f;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark mode sakura colors (inverted and adjusted) */
+      --sakura-50: #4a1f3a;
+      --sakura-100: #5d2847;
+      --sakura-200: #703156;
+      --sakura-300: #8f254f;
+      --sakura-400: #ad285c;
+      --sakura-500: #c23a6e;
+      --sakura-600: #d15587;
+      --sakura-700: #e074a0;
+      --sakura-800: #efa3c3;
+      --sakura-900: #f8d6e5;
+    }
+  }
+}
+
+body {
+  @apply bg-gradient-to-br from-sakura-50 to-sakura-100;
+}
+
+a {
+  @apply text-blue-600 underline;
+}
+
+a:visited {
+  @apply text-purple-600;
+}
+
+/* 90s button */
+.btn-90s {
+  @apply px-6 py-3 border-4 border-black;
+  @apply bg-gradient-to-b from-sakura-300 to-sakura-400;
+  @apply font-bold text-lg shadow-raised-90s;
+  @apply hover:from-sakura-400 hover:to-sakura-500;
+  @apply active:shadow-inset-90s;
+}
+
+/* Webring banner */
+.webring-banner {
+  @apply border-4 border-dashed border-sakura-600;
+  @apply bg-sakura-100 p-4 text-center font-comic;
+}
+
+/* Table cell */
+.table-cell-90s {
+  @apply border-2 border-sakura-800 bg-sakura-100 p-4;
+  @apply shadow-inset-90s;
+}
+
+/* Blink text */
+.blink-text {
+  @apply animate-blink font-bold;
+}
+
+.text-shadow-3d {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.text-rainbow {
+  background: linear-gradient(to right,
+    #ff0000, #ff7f00, #ffff00, #00ff00,
+    #0000ff, #4b0082, #9400d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
