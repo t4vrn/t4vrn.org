@@ -19,11 +19,6 @@ pub fn Webring() -> Element {
 					class: "text-webring-cyan hover:text-webring-magenta underline font-bold text-lg",
 					"GitHub"
 				}
-				a {
-					href: "mailto:hello@t4vr.org",
-					class: "text-webring-cyan hover:text-webring-magenta underline font-bold text-lg",
-					"Email"
-				}
 			}
 		}
 	}

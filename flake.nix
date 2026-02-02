@@ -1,5 +1,5 @@
 {
-  description = "t4vr.org";
+  description = "t4vrn.org";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
