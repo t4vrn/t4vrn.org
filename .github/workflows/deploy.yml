@@ -29,11 +29,13 @@ jobs:
           target: wasm32-unknown-unknown
           override: true
           profile: minimal
+      - uses: Swatinem/rust-cache@v2
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
 
       - name: Install Dioxus CLI
         run: cargo install dioxus-cli
@@ -50,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: target/dx/t4vr-site/release/web/public
+          path: target/dx/t4vrn-site/release/web/public
 
   deploy:
     environment:
